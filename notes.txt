@@ -1,0 +1,16 @@
+./gradlew assemble docker
+
+docker images
+
+./gradlew assemble docker dockerRun
+
+docker ps
+
+./gradlew dockerStop
+
+docker login --username=trailblazers
+
+./gradlew docker dockerPush
+
+
+
