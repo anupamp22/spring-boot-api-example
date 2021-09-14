@@ -12,5 +12,13 @@ docker login --username=trailblazers
 
 ./gradlew docker dockerPush
 
+aws configure
+
+cat ~/.aws/credentials
+
+./gradlew awsCfnMigrateStack awsCfnWaitStackComplete -PsubnetId=subnet-0b07b151 -Pregion=us-west-1
+
+./gradlew awsCfnDeleteStack awsCfnWaitStackComplete
+
 
 
